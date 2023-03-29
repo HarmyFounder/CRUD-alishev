@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>certain</title>
+</head>
+<body>
+
+<p th:text="${post.getTittle()}" ></p>
+<p th:text="${post.getId()}" ></p>
+
+<br/>
+
+<a th:href="@{/posts/{id}/edit(id=${post.getId()})}">Edit!</a>
+
+<br/>
+
+<form th:method="DELETE" th:action="@{/posts/{id}(id=${post.getId()})}">
+  <input type="submit" value="Delete!">
+</form>
+
+</body>
+</html>

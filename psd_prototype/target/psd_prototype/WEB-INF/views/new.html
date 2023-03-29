@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>new</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/posts}" th:object="${post}">
+
+  <label for="tittle">Enter tittle of the post</label>
+  <input type="text" th:field="*{tittle}" id ="tittle">
+  <br/>
+  <br/>
+  <input type="submit" value="Enter tittle">
+
+</form>
+
+</body>
+</html>
